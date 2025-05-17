@@ -4,3 +4,4 @@ oauth2client
 plotly
 pandas
 streamlit-autorefresh
+streamlit_gsheets
