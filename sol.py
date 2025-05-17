@@ -1,3 +1,4 @@
+import json
 import streamlit as st
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -8,7 +9,8 @@ from streamlit_autorefresh import st_autorefresh
 
 # Google Sheets setup
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("mood-logger-creds.json", scope)
+creds_dict = st.secrets["gcp_service_account"]
+creds = ServiceAccountCredentials.from_json_keyfile_name("creds_dict", scope)
 client = gspread.authorize(creds)
 headers = ["Timestamp", "Mood", "Note"]
 sheet = client.open("Mood Logger").sheet1
