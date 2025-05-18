@@ -1,6 +1,6 @@
-streamlit
-gspread
-oauth2client
-plotly
-pandas
-streamlit-autorefresh
+streamlit>=1.28.0
+gspread>=5.12.0
+oauth2client>=4.1.3
+pandas>=2.1.0
+plotly>=5.18.0
+streamlit-autorefresh>=1.0.0
